@@ -11,7 +11,7 @@ rm -Rf $CUR_DIR/output
 echo
 echo ">>>>>> Launching jar"
 
-hadoop jar target/word-count-1.0-SNAPSHOT.jar demo.word_count.WordCount $CUR_DIR/input $CUR_DIR/output
+hadoop jar target/word-count-1.0-SNAPSHOT.jar demo.word_count.WordCount /input /output
 
 #export JAVA_HOME=`/usr/libexec/java_home`
 #export HADOOP_CLASSPATH=${JAVA_HOME}/lib/tools.jar
