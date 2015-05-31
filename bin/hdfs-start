@@ -1,0 +1,4 @@
+#!/bin/sh
+
+cd /usr/local/Cellar/hadoop/2.6.0
+sbin/start-dfs.sh
