@@ -75,4 +75,5 @@ hs_err_pid*
 # Hadoop Output
 output/
 
-
+# Pig
+pig_*.log

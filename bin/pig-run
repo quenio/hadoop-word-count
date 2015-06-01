@@ -1,0 +1,7 @@
+#!/bin/sh
+
+hdfs-rmr /output
+
+#export HADOOP_CONF_DIR==/usr/local/Cellar/hadoop/2.6.0/libexec/etc/hadoop
+
+pig ./src/main/pig/word-count.pig
