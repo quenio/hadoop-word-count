@@ -1,0 +1,17 @@
+#!/bin/sh
+
+PROJ_DIR=`pwd`
+
+sbt package
+
+hdfs-rmr /output
+
+cd /usr/local/Cellar/apache-spark/1.3.1_1
+
+export HADOOP_CONF_DIR==/usr/local/Cellar/hadoop/2.6.0/libexec/etc/hadoop
+
+#  --master local[4] \
+bin/spark-submit \
+  --class "SparkWordCount" \
+  --master yarn-cluster  \
+  $PROJ_DIR/target/scala-2.11/sparkwordcount_2.11-1.0.jar
